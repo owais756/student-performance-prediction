@@ -358,7 +358,7 @@ elif page == "📊 EDA & Analytics":
         with col_d:
             fig4 = px.scatter(df_raw, x=num_feat, y=TARGET_COL, opacity=0.4,
                               color_discrete_sequence=["#6366f1"],
-                              trendline="ols")
+                              trendline="lowess")
             fig4.update_layout(plot_bgcolor="white", paper_bgcolor="white", height=300, margin=dict(l=10,r=10,t=10,b=10))
             st.plotly_chart(fig4, use_container_width=True)
 
